@@ -1,12 +1,15 @@
 class LinkedListNode:
-    def __init__(self, val, next = None):
+
+    def __init__(self, val, next=None):
         self.val = val
         self.next = next
-    
+
     def __str__(self):
         return str(self.val)
 
+
 class LinkedList:
+
     def __init__(self):
         self._head = None
 
@@ -20,7 +23,7 @@ class LinkedList:
             pointer = pointer.next
             idx -= 1
         return pointer
-    
+
     def append(self, value):
         if not self._head:
             self._head = LinkedListNode(value)
@@ -30,7 +33,7 @@ class LinkedList:
         while pointer.next:
             pointer = pointer.next
         pointer.next = LinkedListNode(value)
-    
+
     def insert(self, value, position):
         if position == 0:
             self._head = LinkedListNode(value, self._head)
@@ -40,7 +43,7 @@ class LinkedList:
         except IndexError:
             raise IndexError(f"Position: {position} is out of range.")
         node.next = LinkedListNode(value, node.next)
-    
+
     def __str__(self):
         output = []
         pointer = self._head
@@ -49,6 +52,7 @@ class LinkedList:
             pointer = pointer.next
         return f"[{','.join(output)}]"
 
+
 if __name__ == "__main__":
     linked_list = LinkedList()
     for num in range(5):
@@ -56,4 +60,3 @@ if __name__ == "__main__":
     linked_list.insert(2.5, 3)
     print(linked_list.get(4))
     print(linked_list)
-    
