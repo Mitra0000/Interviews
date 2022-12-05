@@ -1,5 +1,4 @@
 import heapq
-import random
 
 
 def heap_sort(iterable):
