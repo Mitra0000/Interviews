@@ -90,7 +90,7 @@ class Internal(RopeNode):
       self.right.traverse(buffer)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
   rope = Rope("hello ")
   rope.append("world")
   rope.append(", how")
