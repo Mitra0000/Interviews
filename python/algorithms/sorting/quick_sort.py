@@ -20,7 +20,7 @@ def partition(array, l, r):
             left.append(array[i])
         else:
             right.append(array[i])
-    pos = len(left)
+    pos = l + len(left)
     left.append(array[pivot])
     left.extend(right)
     for j in range(l, r + 1):
