@@ -23,7 +23,7 @@ def setup_table(word1, word2):
   for i in range(len(table)):
     table[i][0] = i
   return table
-  
+
 if __name__ == "__main__":
   word1 = input("Enter first word: ")
   word2 = input("Enter second word: ")
