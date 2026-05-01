@@ -1,6 +1,8 @@
 from helper.hash_heap import HashHeap
 from helper.tube_map import tube_map
 
+from collections import defaultdict
+
 class DijkstraSolver:
     """
         A class for finding the shortest path in a graph utilising a HashHeap
